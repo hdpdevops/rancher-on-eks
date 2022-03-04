@@ -36,7 +36,7 @@ resource "aws_kms_key" "eks" {
 }
 
 module "eks" {
-  source                       = "github.com/terraform-aws-modules/terraform-aws-eks"
+  source                       = "github.com/hdpdevops/terraform-aws-eks"
   cluster_name                 = local.cluster_name
   cluster_version              = var.kubernetes_version
   vpc_id                       = data.aws_vpc.vpc.id
